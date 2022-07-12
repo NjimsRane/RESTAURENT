@@ -1,0 +1,34 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  border: none;
+  outline: none;
+}
+:root {
+  --BTN-COLOR: rgb(17, 0, 37);
+  --LOGO-COLOR: whitesmoke;
+  --SPAN-LOGO-COLOR: rgb(3, 87, 80);
+  --TRANSITION: all 0.5s;
+  --FONT-FAMILY: sans-serif, verdana, Helvetica;
+}
+html {
+  font-size: 62.5%;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+
+  .container {
+    padding: 2em;
+  }
+}
