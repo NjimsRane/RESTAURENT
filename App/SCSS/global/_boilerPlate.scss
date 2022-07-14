@@ -7,11 +7,13 @@
 
   border: none;
   outline: none;
+
+  // border: 1px solid red;
 }
 :root {
   --BTN-COLOR: rgb(17, 0, 37);
   --LOGO-COLOR: whitesmoke;
-  --SPAN-LOGO-COLOR: rgb(3, 87, 80);
+  --SPAN-LOGO-COLOR: rgb(87, 3, 3);
   --TRANSITION: all 0.5s;
   --FONT-FAMILY: sans-serif, verdana, Helvetica;
 }

@@ -11,7 +11,7 @@
 :root {
   --BTN-COLOR: rgb(17, 0, 37);
   --LOGO-COLOR: whitesmoke;
-  --SPAN-LOGO-COLOR: rgb(3, 87, 80);
+  --SPAN-LOGO-COLOR: rgb(87, 3, 3);
   --TRANSITION: all 0.5s;
   --FONT-FAMILY: sans-serif, verdana, Helvetica;
 }
@@ -45,14 +45,19 @@ body .container {
   font-size: 3rem;
   font-family: var(--FONT-FAMILY);
   color: var(--LOGO-COLOR);
-  font-weight: 600;
+  font-weight: 800;
+  animation-name: logo;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
 }
 .header #logo span {
   color: var(--SPAN-LOGO-COLOR);
 }
 .header .navBar {
   position: fixed;
-  top: 7em;
+  top: 10em;
   text-align: center;
   width: calc(100% - 5em);
   height: 0;
@@ -81,6 +86,7 @@ body .container {
 }
 .header .hamburgerMenu {
   cursor: pointer;
+  margin-left: auto;
 }
 .header .hamburgerMenu .hamburger {
   width: 3em;
@@ -99,6 +105,14 @@ body .container {
   transform: translate(0, -4px) rotate(45deg);
 }
 
+@keyframes logo {
+  from {
+    transform: translate(-10px, -10px);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
 .heroImage {
   position: absolute;
   top: 0;
@@ -106,14 +120,83 @@ body .container {
   z-index: -1;
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(/images/istockphoto-1276628440-612x612.jpg);
-  background-position: center center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(/images/edgar-castrejon-1CsaVdwfIew-unsplash.jpg);
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   filter: blur(0);
   transition: var(--TRANSITION);
+  font-family: var(--FONT-FAMILY);
 }
 
 .heroImageChange {
   filter: blur(5px);
+}
+
+.heading {
+  transform: translateX(0);
+  margin-top: 2em;
+  transition: 0.5s;
+}
+.heading h1 {
+  color: #fff;
+  font-family: var(--FONT-FAMILY);
+  font-size: 6rem;
+  text-align: center;
+}
+
+.headingChange {
+  transform: translateX(-100%);
+}
+
+@media screen and (min-width: 758px) {
+  body .container {
+    padding-inline: 5em;
+  }
+  body .header .navBar {
+    width: calc(100% - 10em);
+  }
+  body .heading {
+    margin-top: 8em;
+    transform: unset;
+  }
+}
+@media screen and (min-width: 992px) {
+  body .container {
+    padding-inline: 8em;
+  }
+  body .heroImage {
+    width: calc(100% - 16em);
+    height: 40em;
+    top: 10em;
+    left: 8em;
+    filter: none;
+  }
+  body .header #logo {
+    color: #282828;
+  }
+  body .header .hamburgerMenu {
+    display: none;
+  }
+  body .header .navBar {
+    position: unset;
+    top: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  body .header .navBar li {
+    border-top: none;
+  }
+  body .header .navBar .menuLinks {
+    display: flex;
+    margin-left: 3em;
+  }
+  body .header .navBar .menuLinks li {
+    margin-inline-end: 1.5em;
+  }
+  body .header .navBar .menuLinks li a {
+    color: #282828;
+  }
 }/*# sourceMappingURL=style.css.map */

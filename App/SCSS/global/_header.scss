@@ -10,18 +10,24 @@
     font-family: var(--FONT-FAMILY);
     color: var(--LOGO-COLOR);
 
-    font-weight: 600;
+    font-weight: 800;
 
     span {
       color: var(--SPAN-LOGO-COLOR);
     }
+
+    animation-name: logo;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
   }
 
   //====== nav
 
   .navBar {
     position: fixed;
-    top: 7em;
+    top: 10em;
 
     text-align: center;
     width: calc(100% - 5em);
@@ -67,6 +73,7 @@
 
   .hamburgerMenu {
     cursor: pointer;
+    margin-left: auto;
     .hamburger {
       width: 3em;
       height: 0.4em;
@@ -89,5 +96,14 @@
         transform: translate(0, -4px) rotate(45deg);
       }
     }
+  }
+}
+
+@keyframes logo {
+  from {
+    transform: translate(-10px, -10px);
+  }
+  to {
+    transform: translate(0, 0);
   }
 }

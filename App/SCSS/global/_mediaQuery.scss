@@ -1,0 +1,68 @@
+@media screen and (min-width: 758px) {
+  body {
+    .container {
+      padding-inline: 5em;
+    }
+
+    .header {
+      .navBar {
+        width: calc(100% - 10em);
+      }
+    }
+    .heading {
+      margin-top: 8em;
+      transform: unset;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    .container {
+      padding-inline: 8em;
+    }
+
+    .heroImage {
+      width: calc(100% - 16em);
+      height: 40em;
+      top: 10em;
+      left: 8em;
+      filter: none;
+    }
+
+    .header {
+      #logo {
+        color: #282828;
+      }
+      .hamburgerMenu {
+        display: none;
+      }
+
+      .navBar {
+        position: unset;
+        top: auto;
+        height: auto;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        li {
+          border-top: none;
+        }
+
+        .menuLinks {
+          display: flex;
+          margin-left: 3em;
+
+          li {
+            margin-inline-end: 1.5em;
+            a {
+              color: #282828;
+            }
+          }
+        }
+      }
+    }
+  }
+}
